@@ -1,0 +1,321 @@
+@import url("https://db.onlinewebfonts.com/c/2c873f3e0c36ae1affa28094bfa91760?family=Moche");
+
+:root {
+  --bg: #f5f4ef;
+  --text: #11110f;
+  --muted: #74736c;
+  --line: #d8d6cf;
+  --card: #151513;
+  --card-text: #f5f4ef;
+  --max: 1440px;
+  --header-h: 76px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: "Moche", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+
+.shell,
+.site-header {
+  width: min(calc(100% - 64px), var(--max));
+  margin-inline: auto;
+}
+
+.site-header {
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: -.035em;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+  font-size: .88rem;
+}
+
+nav a,
+.paper-link {
+  transition: opacity 180ms ease;
+}
+
+nav a:hover,
+.paper-link:hover { opacity: .55; }
+
+.landing {
+  min-height: calc(100svh - var(--header-h));
+  display: grid;
+  grid-template-rows: auto minmax(320px, 1fr);
+  align-content: stretch;
+  overflow: hidden;
+}
+
+.hero {
+  padding-top: clamp(34px, 5.2vh, 60px);
+  padding-bottom: clamp(14px, 2.1vh, 24px);
+}
+
+.kicker,
+.paper-meta {
+  margin: 0;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+
+h1,
+p { margin-top: 0; }
+
+h1 {
+  width: 100%;
+  margin: clamp(12px, 1.7vh, 20px) 0 clamp(12px, 1.8vh, 20px);
+  font-size: clamp(3.2rem, 5vw, 5.35rem);
+  line-height: 1;
+  letter-spacing: -.045em;
+  font-weight: 400;
+}
+
+.hero-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero-line + .hero-line {
+  margin-top: .12em;
+}
+
+.hero-line-secondary {
+  font-weight: 400;
+}
+
+.intro {
+  width: 100%;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: clamp(.98rem, 1.25vw, 1.18rem);
+  letter-spacing: -.015em;
+  white-space: nowrap;
+}
+
+.carousel {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: minmax(260px, 1fr) 46px;
+  align-items: stretch;
+}
+
+.carousel-stage {
+  position: relative;
+  width: 100%;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1100px;
+  touch-action: pan-y;
+}
+
+.research-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(310px, 66vw);
+  height: min(255px, 29vh);
+  min-height: 220px;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: var(--card);
+  color: var(--card-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform-origin: center center;
+  will-change: transform, opacity;
+  box-shadow: 0 20px 60px rgba(0,0,0,.12);
+  transition: box-shadow 180ms ease;
+}
+
+.research-card:hover {
+  box-shadow: 0 25px 76px rgba(0,0,0,.19);
+}
+
+.paper-meta {
+  color: rgba(245,244,239,.58);
+}
+
+.paper-title {
+  display: block;
+  font-size: clamp(1.03rem, 1.55vw, 1.3rem);
+  line-height: 1.08;
+  letter-spacing: -.03em;
+  text-wrap: balance;
+}
+
+.paper-link {
+  align-self: flex-start;
+  color: rgba(245,244,239,.72);
+  font-size: .78rem;
+}
+
+.carousel-controls {
+  height: 46px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
+}
+
+.carousel-button {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text);
+  background: transparent;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.carousel-button:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.carousel-count {
+  min-width: 52px;
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: .7rem;
+  letter-spacing: .08em;
+  text-align: center;
+}
+
+.site-footer {
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+@media (max-height: 760px) and (min-width: 721px) {
+  .hero {
+    padding-top: 24px;
+    padding-bottom: 8px;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 4.5vw, 4.6rem);
+    margin: 9px 0 10px;
+  }
+
+  .research-card {
+    height: 215px;
+    min-height: 205px;
+    padding: 20px;
+  }
+
+  .landing {
+    grid-template-rows: auto minmax(245px, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .shell,
+  .site-header {
+    width: min(calc(100% - 40px), var(--max));
+  }
+
+  h1 {
+    font-size: clamp(2.7rem, 6.2vw, 4.15rem);
+  }
+
+  .research-card {
+    width: min(285px, 64vw);
+  }
+}
+
+@media (max-width: 720px) {
+  :root { --header-h: 68px; }
+
+  .shell,
+  .site-header {
+    width: min(calc(100% - 32px), var(--max));
+  }
+
+  nav { gap: 16px; font-size: .82rem; }
+
+  .landing {
+    min-height: calc(100svh - var(--header-h));
+    grid-template-rows: auto minmax(340px, 1fr);
+    overflow: visible;
+  }
+
+  .hero {
+    padding-top: 30px;
+    padding-bottom: 8px;
+  }
+
+  h1 {
+    margin: 12px 0 14px;
+    font-size: clamp(2.2rem, 8.2vw, 3.4rem);
+    line-height: 1;
+    letter-spacing: -.04em;
+  }
+
+  .hero-line {
+    white-space: normal;
+  }
+
+  .intro {
+    max-width: 620px;
+    font-size: clamp(.86rem, 3.5vw, 1rem);
+    white-space: normal;
+  }
+
+  .carousel {
+    grid-template-rows: minmax(300px, 1fr) 46px;
+  }
+
+  .carousel-stage {
+    min-height: 300px;
+  }
+
+  .research-card {
+    width: min(250px, 68vw);
+    height: 245px;
+    min-height: 230px;
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .paper-title {
+    font-size: clamp(1rem, 4.5vw, 1.18rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

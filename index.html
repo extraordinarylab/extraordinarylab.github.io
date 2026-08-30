@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="ExtraOrdinaryLab is a non-profit research lab advancing fundamental research across language, speech, and world models."
+  />
+  <meta name="theme-color" content="#f5f4ef" />
+  <title>ExtraOrdinaryLab — Non-profit Research Lab</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header shell">
+    <a class="brand" href="#top" aria-label="ExtraOrdinaryLab home">ExtraOrdinaryLab</a>
+    <nav aria-label="Primary navigation">
+      <a href="https://github.com/extraordinarylab" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a href="mailto:yang.wang@extraordinarylab.org.uk">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="landing" aria-label="ExtraOrdinaryLab introduction and research">
+      <div class="hero shell">
+        <p class="kicker">NON-PROFIT RESEARCH LAB</p>
+        <h1>
+          <span class="hero-line hero-line-primary">Researching the ordinary.</span>
+          <span class="hero-line hero-line-secondary">Discovering the extraordinary.</span>
+        </h1>
+        <p class="intro">ExtraOrdinaryLab advances fundamental research across language, speech, and world models.</p>
+      </div>
+
+      <div class="carousel" aria-label="Research publications">
+        <div class="carousel-stage" id="carousel-stage">
+          <a
+            class="research-card"
+            href="https://ieeexplore.ieee.org/document/11463042"
+            target="_blank"
+            rel="noreferrer"
+            data-index="0"
+          >
+            <span class="paper-meta">ICASSP · 2026</span>
+            <span class="paper-title">The Achilles’ Heel of Angular Margins: A Chebyshev Polynomial Fix for Speaker Verification.</span>
+            <span class="paper-link">Read paper ↗</span>
+          </a>
+
+          <a
+            class="research-card"
+            href="https://aclanthology.org/2025.tacl-1.63.pdf"
+            target="_blank"
+            rel="noreferrer"
+            data-index="1"
+          >
+            <span class="paper-meta">TACL · 2025</span>
+            <span class="paper-title">Adversarial Defence without Adversarial Defence: Enhancing Language Model Robustness via Instance-level Principal Component Removal.</span>
+            <span class="paper-link">Read paper ↗</span>
+          </a>
+
+          <a
+            class="research-card"
+            href="https://aclanthology.org/2025.emnlp-main.1177.pdf"
+            target="_blank"
+            rel="noreferrer"
+            data-index="2"
+          >
+            <span class="paper-meta">EMNLP · 2025</span>
+            <span class="paper-title">Drivel-ology: Challenging LLMs with Interpreting Nonsense with Depth.</span>
+            <span class="paper-link">Read paper ↗</span>
+          </a>
+
+          <a
+            class="research-card"
+            href="https://aclanthology.org/anthology-files/pdf/coling/2025.coling-main.432.pdf"
+            target="_blank"
+            rel="noreferrer"
+            data-index="3"
+          >
+            <span class="paper-meta">COLING · 2025</span>
+            <span class="paper-title">Raising the Bar for Adversarial Defence Benchmarks.</span>
+            <span class="paper-link">Read paper ↗</span>
+          </a>
+
+          <a
+            class="research-card"
+            href="https://arxiv.org/pdf/2608.04939"
+            target="_blank"
+            rel="noreferrer"
+            data-index="4"
+          >
+            <span class="paper-meta">PREPRINT · 2026</span>
+            <span class="paper-title">Reading Between the Frames: Interpreting Implicit and Non-literal Meaning in Social Media Videos.</span>
+            <span class="paper-link">Read paper ↗</span>
+          </a>
+        </div>
+
+        <div class="carousel-controls shell" aria-label="Carousel controls">
+          <button class="carousel-button" id="prev-paper" type="button" aria-label="Previous paper">←</button>
+          <p class="carousel-count" aria-live="polite"><span id="active-paper">01</span> / 05</p>
+          <button class="carousel-button" id="next-paper" type="button" aria-label="Next paper">→</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell">
+    <span>© 2020 ExtraOrdinaryLab</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
